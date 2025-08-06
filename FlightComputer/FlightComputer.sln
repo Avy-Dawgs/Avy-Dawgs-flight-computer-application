@@ -4,6 +4,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiverTest", "ReceiverTes
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReceiverInterface", "ReceiverInterface\ReceiverInterface.csproj", "{DA9A5996-7EE7-4A14-B3AD-DFD02D5367E2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BluetoothServerTest", "BluetoothServerTest\BluetoothServerTest.csproj", "{571719F3-E51E-4686-9103-F1BF87C826AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +20,9 @@ Global
 		{DA9A5996-7EE7-4A14-B3AD-DFD02D5367E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DA9A5996-7EE7-4A14-B3AD-DFD02D5367E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DA9A5996-7EE7-4A14-B3AD-DFD02D5367E2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{571719F3-E51E-4686-9103-F1BF87C826AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{571719F3-E51E-4686-9103-F1BF87C826AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{571719F3-E51E-4686-9103-F1BF87C826AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{571719F3-E51E-4686-9103-F1BF87C826AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
