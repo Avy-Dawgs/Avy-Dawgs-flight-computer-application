@@ -3,6 +3,10 @@ using System.IO.Ports;
 
 namespace ReceiverInterface;
 
+/// <summary>
+/// Represents serial interface for getting data from a
+/// receiver.
+/// </summary>
 public class ReceiverInterface : IDisposable
 {
     private readonly SerialPort _serialPort;
@@ -11,10 +15,18 @@ public class ReceiverInterface : IDisposable
 
     private Task? _receiveTask;
 
+    /// <summary>
+    /// Invoked when data is received.
+    /// </summary>
     public event EventHandler<string>? ReceivedData;
     
+    /// <summary>
+    /// Constructor.
+    /// </summary>
+    /// <param name="portName"></param>
     public ReceiverInterface(string portName)
     {
+        // TODO: add configuration class for these params
         _serialPort = new SerialPort()
         {
             PortName = portName,
@@ -28,6 +40,9 @@ public class ReceiverInterface : IDisposable
         _cts = new();
     }
 
+    /// <summary>
+    /// Start receiving data.
+    /// </summary>
     public void Start()
     {
         if (_serialPort.IsOpen)
@@ -40,6 +55,10 @@ public class ReceiverInterface : IDisposable
         _receiveTask = Task.Run(() => ReadLoop(_cts.Token));
     }
 
+    /// <summary>
+    /// Main loop for reading data.
+    /// </summary>
+    /// <param name="token"></param>
     private void ReadLoop(CancellationToken token)
     {
         while (true)
@@ -57,6 +76,9 @@ public class ReceiverInterface : IDisposable
         }
     }
 
+    /// <summary>
+    /// Dispose of this object.
+    /// </summary>
     public void Dispose()
     {
         _cts.Cancel();

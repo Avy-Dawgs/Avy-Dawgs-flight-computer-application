@@ -1,5 +1,8 @@
-﻿using ReceiverInterface;
-// See https://aka.ms/new-console-template for more information
+﻿/*
+ * Simple test of receiving data over a serial port.
+ */
+
+using ReceiverInterface;
 
 Console.WriteLine("Starting.");
 
