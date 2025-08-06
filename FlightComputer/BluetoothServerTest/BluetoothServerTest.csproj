@@ -7,4 +7,12 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+      <PlatformTarget>ARM64</PlatformTarget>
+    </PropertyGroup>
+
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <PlatformTarget>ARM64</PlatformTarget>
+    </PropertyGroup>
+
 </Project>
